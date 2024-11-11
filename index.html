@@ -6,62 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Autoryzowany Serwis JotFix</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <!-- Import Montserrat font -->
     <style>
-        /* Colors from Design System */
         :root {
             --primary-color: #FFD400;
-            /* Small Text */
             --secondary-color: #0e36ff;
-            /* Subheading */
             --tertiary-color: #E0E0E0;
-            /* Paragraph */
-            --text-color-dark: #000000;
-            --text-color-light: #ffffff;
-            --button-primary: #FFD400;
-            --button-primary-text: #000000;
-            --background-color-start: #22211e;
-            --background-color-end: #4d4c3f;
+            --text-dark: #000000;
+            --text-light: #ffffff;
+            --btn-primary-bg: #FFD400;
+            --btn-primary-text: #000000;
+            --bg-start: #22211e;
+            --bg-end: #4d4c3f;
         }
 
-        /* General Styles */
-        html {
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
+        }
+
+        body {
             font-family: 'Montserrat', Arial, sans-serif;
-            /* Use Montserrat font */
-            background: radial-gradient(var(--background-color-end), var(--background-color-start) 90%);
-            color: var(--text-color-light);
+            background: radial-gradient(var(--bg-end), var(--bg-start) 90%);
+            color: var(--text-light);
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            position: relative;
-            /* Required for overlay */
             overflow: hidden;
-            /* Prevent scrollbars */
         }
 
         .container {
-            max-width: 600px;
-            width: 100%;
-            padding: 40px;
+            max-width: 700px;
+            padding: 50px;
             text-align: center;
-            position: relative;
-            /* Position relative for overlay */
-            z-index: 1;
-            /* Ensure content is above overlay */
             background: radial-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9));
-            /* Transparent background */
             border-radius: 15px;
-            /* Add rounded corners */
         }
 
-        /* Header */
         header {
-            color: var(--text-color-light);
+            color: var(--text-light);
             background-color: var(--secondary-color);
-            outline: 3px solid var(--text-color-dark);
+            outline: 3px solid var(--text-dark);
             padding: 20px;
             font-size: 2rem;
             font-weight: bold;
@@ -69,7 +55,6 @@
             margin-bottom: 20px;
         }
 
-        /* Main Content */
         h1 {
             font-size: 2.5rem;
             font-weight: bold;
@@ -77,38 +62,32 @@
             margin-bottom: 20px;
         }
 
-        /* Brand List */
         .brand-list {
-            list-style-type: none;
-            padding: 0;
+            list-style: none;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 15px;
+            padding: 0;
         }
 
         .brand-list li {
-            background-color: var(--text-color-dark);
+            background-color: var(--text-dark);
             padding: 8px;
             border-radius: 8px;
             font-weight: bold;
-            color: var(--button-primary);
-            outline: 3px solid var(--button-primary);
-            text-align: center;
+            color: var(--primary-color);
+            outline: 3px solid var(--primary-color);
             width: 150px;
         }
 
-        /* Button */
         .button-primary {
-            background-color: var(--button-primary);
-            color: var(--button-primary-text);
+            background-color: var(--btn-primary-bg);
+            color: var(--btn-primary-text);
             padding: 8px 16px;
-            /* Smaller padding */
             border-radius: 8px;
             font-size: 1rem;
-            /* Smaller font size for the button */
             font-weight: bold;
-            text-align: center;
             text-decoration: none;
             display: inline-block;
             margin-top: 20px;
@@ -118,11 +97,8 @@
 
 <body>
     <div class="container">
-        <!-- Header -->
-        <header>AUTORYZOWANY SERWIS <br> JotFix </br> </header>
+        <header>AUTORYZOWANY SERWIS RTV BIAŁYSTOK<br>JotFix Jerzy Susoł</header>
 
-        <!-- Main Content -->
-        <h1>PARTNERZY</h1>
         <ul class="brand-list">
             <li>SONY</li>
             <li>PHILIPS</li>
@@ -133,8 +109,9 @@
             <li>HISENSE</li>
             <li>JVC</li>
         </ul>
-        <a href="tel:+48605898031" class="button-primary">Zadzwoń do nas: +48 605 898 031</a>
 
+        <a href="tel:+48605898031" class="button-primary">Zadzwoń do nas: +48 605 898 031</a>
+        <a href="mailto:emailmoznazroic@jotfix.pl" class="button-primary">Napisz do nas: emailmoznazrobic@jotfix.pl</a>
     </div>
 </body>
 
